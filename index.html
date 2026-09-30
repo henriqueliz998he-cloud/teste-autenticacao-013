@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Teste #013 — Dupla Autenticação</title>
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="pagina">
+
+        <header class="cabecalho">
+
+            <p class="numero-teste">
+                🧪 TESTE #013
+            </p>
+
+            <h1>
+                Dupla Autenticação
+            </h1>
+
+            <p class="descricao">
+                Laboratório de senha e reconhecimento de voz.
+            </p>
+
+        </header>
+
+
+        <!-- ETAPA 1 -->
+
+        <section
+            id="etapa1"
+            class="tela"
+        >
+
+            <div class="icone">
+                🔐
+            </div>
+
+            <p class="etapa">
+                ETAPA 1 DE 2
+            </p>
+
+            <h2>
+                Primeira senha
+            </h2>
+
+            <p class="texto">
+                Digite a primeira senha para continuar.
+            </p>
+
+
+            <form id="formPrimeiraSenha">
+
+                <label for="primeiraSenha">
+                    Senha
+                </label>
+
+                <input
+                    id="primeiraSenha"
+                    type="password"
+                    autocomplete="off"
+                    placeholder="Digite a senha"
+                >
+
+                <button
+                    type="submit"
+                    class="botao principal"
+                >
+                    ENTRAR
+                </button>
+
+            </form>
+
+
+            <p
+                id="erroPrimeiraSenha"
+                class="mensagem erro escondido"
+            >
+                ❌ Senha incorreta.
+            </p>
+
+        </section>
+
+
+        <!-- ETAPA 2 -->
+
+        <section
+            id="etapa2"
+            class="tela escondido"
+        >
+
+            <div class="icone">
+                🔓
+            </div>
+
+            <p class="etapa">
+                ETAPA 2 DE 2
+            </p>
+
+            <h2>
+                Escolha como abrir
+            </h2>
+
+            <p class="texto">
+                Use a palavra-chave ou uma segunda senha.
+            </p>
+
+
+            <div class="opcoes">
+
+
+                <!-- VOZ -->
+
+                <div class="opcao">
+
+                    <div class="opcao-icone">
+                        🎤
+                    </div>
+
+                    <h3>
+                        Abrir com palavra-chave
+                    </h3>
+
+                    <p>
+                        Clique no microfone e diga:
+                    </p>
+
+                    <strong class="palavra-exemplo">
+                        "Henrique"
+                    </strong>
+
+
+                    <button
+                        id="botaoMicrofone"
+                        class="botao microfone"
+                        type="button"
+                    >
+                        🎤 FALAR PALAVRA-CHAVE
+                    </button>
+
+
+                    <p
+                        id="statusVoz"
+                        class="status"
+                    >
+                        Aguardando...
+                    </p>
+
+
+                    <div
+                        id="palavraDetectada"
+                        class="palavra-detectada"
+                    >
+                        —
+                    </div>
+
+                </div>
+
+
+                <!-- SENHA -->
+
+                <div class="opcao">
+
+                    <div class="opcao-icone">
+                        🔑
+                    </div>
+
+                    <h3>
+                        Abrir com senha
+                    </h3>
+
+                    <p>
+                        Use a segunda senha.
+                    </p>
+
+
+                    <form id="formSegundaSenha">
+
+                        <label for="segundaSenha">
+                            Segunda senha
+                        </label>
+
+                        <input
+                            id="segundaSenha"
+                            type="password"
+                            autocomplete="off"
+                            placeholder="Digite a segunda senha"
+                        >
+
+                        <button
+                            type="submit"
+                            class="botao"
+                        >
+                            ABRIR COM SENHA
+                        </button>
+
+                    </form>
+
+
+                    <p
+                        id="erroSegundaSenha"
+                        class="mensagem erro escondido"
+                    >
+                        ❌ Segunda senha incorreta.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <p
+                id="erroMicrofone"
+                class="mensagem erro escondido"
+            >
+                ❌ Não foi possível iniciar o reconhecimento de voz.
+            </p>
+
+        </section>
+
+
+        <!-- ÁREA LIBERADA -->
+
+        <section
+            id="areaLiberada"
+            class="tela sucesso escondido"
+        >
+
+            <div class="icone grande">
+                ✅
+            </div>
+
+            <p class="etapa">
+                AUTENTICAÇÃO CONCLUÍDA
+            </p>
+
+            <h2>
+                Acesso liberado!
+            </h2>
+
+            <p class="texto">
+                As duas etapas foram concluídas com sucesso.
+            </p>
+
+
+            <div class="resultado">
+
+                <p>
+                    🔐 Primeira etapa
+                    <strong>
+                        Confirmada
+                    </strong>
+                </p>
+
+                <p>
+                    🛡️ Segunda etapa
+                    <strong id="metodoEntrada">
+                        Confirmada
+                    </strong>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <p>
+                #013 — Dupla Autenticação
+            </p>
+
+            <p>
+                GitHub Pages • Experimento local
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="./script.js"></script>
+
+</body>
+
+  </html>
